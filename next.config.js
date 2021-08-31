@@ -5,4 +5,7 @@ module.exports = {
     locales: ['es', 'pt'],
     defaultLocale: 'es',
   },
+  images: {
+    domains: ['ag7digital-site.s3.amazonaws.com'],
+  },
 };

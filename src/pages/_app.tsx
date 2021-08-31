@@ -50,10 +50,12 @@ function MyApp({ Component, pageProps }: AppProps) {
           name='viewport'
           content='width=device-width,minimum-scale=1,initial-scale=1.0'
         ></meta>
+        <link rel='shortcut icon' href='favicon.png' />
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />
     </>
   );
 }
+
 export default MyApp;
