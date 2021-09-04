@@ -3,11 +3,13 @@ import Header from '../components/Header';
 
 import { getHeaderData } from '../lib/header';
 import IHeader from '../interfaces/i-header';
+import Burger from '../components/Burger';
 
 const Home = ({ header }: { header: IHeader }) => {
   return (
     <>
       <Header {...header} />
+      <Burger {...header} />
     </>
   );
 };
