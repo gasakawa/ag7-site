@@ -9,6 +9,7 @@ import IPageImage from '../interfaces/i-page-image';
 import React from 'react';
 import Heading from '../components/Sections/Heading';
 import ITextBox from '../interfaces/i-textbox';
+import AboutUs from '../components/AboutUs';
 
 const Home = ({
   header,
@@ -24,7 +25,11 @@ const Home = ({
       <Header {...header} />
       {/* <Burger {...header} /> */}
       <Heading {...heading} />
-      <pre>{JSON.stringify(aboutUs)}</pre>
+      <AboutUs
+        description={aboutUs.description}
+        title={aboutUs.title}
+        subtitle={aboutUs.subtitle}
+      />
     </>
   );
 };
