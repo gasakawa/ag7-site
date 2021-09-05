@@ -5,9 +5,9 @@ export const HeaderWrapper = styled.header`
   display: flex;
   align-items: center;
   justify-content: center;
-  position: fixed;
+  position: sticky;
   width: 100vw;
-  padding: 5px 0 5px 0;
+  padding: 10px 0 10px 0;
 
   background-image: linear-gradient(
     180deg,

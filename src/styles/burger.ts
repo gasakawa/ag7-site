@@ -12,8 +12,8 @@ export const BurgerWrapper = styled.div`
     display: flex;
     float: right;
     top: 0;
-    margin-right: 15px;
-    margin-top: 5px;
+    margin-right: 20px;
+    margin-top: 10px;
     
   `}
 `;
@@ -31,7 +31,7 @@ export const BurgerMenu = styled.div<BurgerProps>`
   position: absolute;
   height: 100vh;
   background-color: var(--color-primary);
-  margin-top: 58px;
+  margin-top: 69px;
   right: 0;
   width: 300px;
   padding: 30px 15px;

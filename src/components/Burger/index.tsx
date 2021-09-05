@@ -15,9 +15,9 @@ const Burger = (data: IHeader) => {
         <Hamburger
           toggle={setOpen}
           toggled={isOpen}
-          size={32}
+          size={24}
           duration={0.4}
-          distance='md'
+          distance='sm'
           color='#fff'
           easing='ease-in'
           rounded
