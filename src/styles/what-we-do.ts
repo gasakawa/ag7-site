@@ -13,6 +13,7 @@ export const WhatWeDoSection = styled.section`
   flex-direction: column;
   width: 80%;
   padding: 20px 20px;
+  margin-top: 50px;
 
   ${media.lessThan('large')`
    padding: 20px 0 ;
@@ -44,7 +45,7 @@ export const WhatWeDoCard = styled.div`
   h2 {
     margin: 30px 0;
     color: var(--color-primary);
-    font-size: 1.875rem;
+    font-size: 1.5rem;
   }
 
   p {

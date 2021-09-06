@@ -17,5 +17,16 @@ export default interface IColumn {
     id: string;
     alternativeText?: string;
   };
+  Icon?: {
+    _id: string;
+    name: string;
+    url: string;
+    mime: string;
+    size: number;
+    width: number;
+    height: number;
+    id: string;
+    alternativeText?: string;
+  };
   heading?: string;
 }

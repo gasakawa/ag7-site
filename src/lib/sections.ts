@@ -7,6 +7,8 @@ import api from '../services/api';
 import ICardOnlyText from '../interfaces/i-card-only-text';
 import ICardWithImageText from '../interfaces/i-card-with-image-text';
 import IWhatWeDo from '../interfaces/i-what-we-do';
+import ICardWithIcon from '../interfaces/i-card-with-icon';
+import IServices from '../interfaces/i-services';
 
 export const getHeadingData = async (
   name: string,
@@ -98,5 +100,40 @@ export const getWhatWeDo = async (
   return {
     textBox,
     cards: cardsWithImageText,
+  };
+};
+
+export const getServices = async (
+  name: string,
+  locale: string = 'es',
+): Promise<IServices> => {
+  const { data } = await api.get(`/sections?_Name=${name}&_locale=${locale}`);
+
+  const textBlock = data[0].columns
+    .filter((col: IColumn) => col.__component === 'page.text-block')
+    .shift() as IColumn;
+
+  const cards = data[0].columns.filter(
+    (col: IColumn) => col.__component === 'page.card-with-icon',
+  ) as IColumn[];
+
+  const cardsWithIcon = cards.map(card => ({
+    id: card.id,
+    Icon: card.Icon,
+    Title: card.Title,
+    Description: card.Description,
+  })) as ICardWithIcon[];
+
+  const textBox = {
+    id: textBlock.id,
+    title: textBlock.Title,
+    subtitle: textBlock.Subtitle,
+    name: textBlock.__component,
+    description: textBlock.Description,
+  } as ITextBox;
+
+  return {
+    textBox,
+    cards: cardsWithIcon,
   };
 };
