@@ -3,13 +3,12 @@ import Header from '../components/Header';
 
 import { getHeaderData } from '../lib/header';
 import IHeader from '../interfaces/i-header';
-import Burger from '../components/Burger';
-import { getColumnWithImage, getTextBox } from '../lib/sections';
+import { getHeadingData, getAboutUs } from '../lib/sections';
 import IPageImage from '../interfaces/i-page-image';
 import React from 'react';
 import Heading from '../components/Sections/Heading';
-import ITextBox from '../interfaces/i-textbox';
 import AboutUs from '../components/AboutUs';
+import IAboutUs from '../interfaces/i-about-us';
 
 const Home = ({
   header,
@@ -18,18 +17,14 @@ const Home = ({
 }: {
   header: IHeader;
   heading: IPageImage;
-  aboutUs: ITextBox;
+  aboutUs: IAboutUs;
 }) => {
   return (
     <>
       <Header {...header} />
       {/* <Burger {...header} /> */}
       <Heading {...heading} />
-      <AboutUs
-        description={aboutUs.description}
-        title={aboutUs.title}
-        subtitle={aboutUs.subtitle}
-      />
+      <AboutUs {...aboutUs} />
     </>
   );
 };
@@ -37,8 +32,8 @@ const Home = ({
 export const getStaticProps: GetStaticProps = async context => {
   const { locale } = context;
   const header = await getHeaderData(locale);
-  const heading = await getColumnWithImage('first-section', locale);
-  const aboutUs = await getTextBox('about-us', locale);
+  const heading = await getHeadingData('first-section', locale);
+  const aboutUs = await getAboutUs('about-us', locale);
 
   return {
     props: {
