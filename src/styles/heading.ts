@@ -47,7 +47,6 @@ export const HeadingTitle = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-top: 60px;
   width: 40%;
 
   ${media.lessThan('large')`

@@ -4,7 +4,7 @@ import IPageImage from '../interfaces/i-page-image';
 import ITextBlock from '../interfaces/i-text-block';
 import ITextBox from '../interfaces/i-textbox';
 import api from '../services/api';
-import ICardOnlyText from '../styles/i-card-only-text';
+import ICardOnlyText from '../interfaces/i-card-only-text';
 
 export const getHeadingData = async (
   name: string,
