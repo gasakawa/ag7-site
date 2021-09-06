@@ -1,4 +1,5 @@
 import styled from 'styled-components';
+import media from 'styled-media-query';
 
 export const TextBoxWrapper = styled.div`
   display: flex;
@@ -16,6 +17,10 @@ export const TextBoxTitle = styled.h2`
 
   margin-inline-end: 0;
   margin-inline-start: 0;
+
+  ${media.lessThan('large')`
+    font-size: 2rem;
+  `}
 `;
 
 export const TextBoxSubtitle = styled.h3`

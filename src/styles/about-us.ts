@@ -15,8 +15,8 @@ export const AboutUsWrapper = styled.div`
 
 export const AboutUsSection = styled.section`
   display: flex;
-  width: 60%;
-  padding: 20px 20px 0 0;
+  width: 80%;
+  padding: 20px 20px;
 
   ${media.lessThan('large')`
     flex-direction: column;

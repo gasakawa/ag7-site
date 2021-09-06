@@ -6,7 +6,7 @@ export default interface IColumn {
   Subtitle?: string;
   _v: string;
   _id: string;
-  image?: {
+  Image?: {
     _id: string;
     name: string;
     url: string;
@@ -15,6 +15,7 @@ export default interface IColumn {
     width: number;
     height: number;
     id: string;
+    alternativeText?: string;
   };
   heading?: string;
 }
