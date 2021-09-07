@@ -1,7 +1,7 @@
 import React, { FC } from 'react';
-import ICardOnlyText from '../../../interfaces/i-card-only-text';
+import ICardOnlyText from '../../interfaces/i-card-only-text';
 
-import * as S from '../../../styles/card-only-text';
+import * as S from '../../styles/card-only-text';
 
 interface CardOnlyTextProps {
   bodyColor: string;

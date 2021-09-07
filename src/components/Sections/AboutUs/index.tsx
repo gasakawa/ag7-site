@@ -3,7 +3,7 @@ import TextBox from '../../TextBox';
 
 import * as S from '../../../styles/about-us';
 import IAboutUs from '../../../interfaces/i-about-us';
-import CardOnlyText from '../CardOnlyText';
+import CardOnlyText from '../../CardOnlyText';
 
 const AboutUs = (data: IAboutUs) => {
   return (
