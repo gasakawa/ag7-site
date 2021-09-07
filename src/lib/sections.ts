@@ -9,6 +9,7 @@ import ICardWithImageText from '../interfaces/i-card-with-image-text';
 import IWhatWeDo from '../interfaces/i-what-we-do';
 import ICardWithIcon from '../interfaces/i-card-with-icon';
 import IServices from '../interfaces/i-services';
+import IClient from '../interfaces/i-client';
 
 export const getHeadingData = async (
   name: string,
@@ -135,5 +136,35 @@ export const getServices = async (
   return {
     textBox,
     cards: cardsWithIcon,
+  };
+};
+
+export const getClients = async (
+  name: string,
+  locale: string = 'es',
+): Promise<IClient> => {
+  const { data } = await api.get(`/sections?_Name=${name}&_locale=${locale}`);
+
+  const textBlock = data[0].columns
+    .filter((col: IColumn) => col.__component === 'page.text-block')
+    .shift() as IColumn;
+
+  const images = data[0].columns
+    .filter((col: IColumn) => col.__component === 'page.slider')
+    .shift() as IColumn;
+
+  const textBox = {
+    id: textBlock.id,
+    title: textBlock.Title,
+    subtitle: textBlock.Subtitle,
+    name: textBlock.__component,
+    description: textBlock.Description,
+  } as ITextBox;
+
+  const slider = images.images || [];
+
+  return {
+    textBox,
+    slider,
   };
 };

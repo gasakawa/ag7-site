@@ -1,3 +1,5 @@
+import IImage from './i-image';
+
 export default interface IColumn {
   id: string;
   __component: string;
@@ -6,27 +8,8 @@ export default interface IColumn {
   Subtitle?: string;
   _v: string;
   _id: string;
-  Image?: {
-    _id: string;
-    name: string;
-    url: string;
-    mime: string;
-    size: number;
-    width: number;
-    height: number;
-    id: string;
-    alternativeText?: string;
-  };
-  Icon?: {
-    _id: string;
-    name: string;
-    url: string;
-    mime: string;
-    size: number;
-    width: number;
-    height: number;
-    id: string;
-    alternativeText?: string;
-  };
+  Image?: IImage;
+  Icon?: IImage;
   heading?: string;
+  images?: IImage[];
 }
