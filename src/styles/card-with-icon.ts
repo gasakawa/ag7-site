@@ -14,7 +14,7 @@ export const CardWithIconWrapper = styled.div`
   padding: 60px 30px 30px 30px;
   margin: 15px 20px 0 0;
   border-radius: 6px;
-  height: 400px;
+  height: auto;
 
   ${media.lessThan('large')`
     height: auto;

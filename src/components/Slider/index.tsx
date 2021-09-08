@@ -13,19 +13,19 @@ const Slider = ({ images }: SliderProps) => {
 
   const [maxImagePosition, setMaxImagePosition] = useState(4);
 
-  useEffect(() => {
-    const nextImages = () => {
-      if (maxImagePosition >= totalImages) {
-        setMaxImagePosition(4);
-      } else {
-        setMaxImagePosition(maxImagePosition + 4);
-      }
-    };
+  // useEffect(() => {
+  //   const nextImages = () => {
+  //     if (maxImagePosition >= totalImages) {
+  //       setMaxImagePosition(4);
+  //     } else {
+  //       setMaxImagePosition(maxImagePosition + 4);
+  //     }
+  //   };
 
-    setInterval(() => {
-      nextImages();
-    }, 5000);
-  }, []);
+  //   setInterval(() => {
+  //     nextImages();
+  //   }, 5000);
+  // }, []);
   return (
     <S.SliderWrapper>
       {images.map((image: IImage, pos: number) => {

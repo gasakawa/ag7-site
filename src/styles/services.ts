@@ -13,7 +13,11 @@ export const ServicesSection = styled.section`
   align-items: flex-start;
   justify-content: flex-start;
   width: 80%;
-  padding: 50px 0;
+  padding: 30px 0;
+
+  ${media.lessThan('large')`
+    padding: 20px 0;
+  `}
 `;
 
 export const ServiceTextBlock = styled.div`
@@ -21,11 +25,18 @@ export const ServiceTextBlock = styled.div`
   margin-bottom: 15px;
 `;
 
+export const ServicesCardsSection = styled.section`
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 20px 0 30px 0;
+`;
+
 export const ServicesCardsWrapper = styled.div`
   display: flex;
   align-items: center;
   justify-content: center;
-  width: 80%;
+  width: 70%;
 
   ${media.lessThan('large')`
     flex-direction: column;

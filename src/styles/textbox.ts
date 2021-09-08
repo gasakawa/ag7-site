@@ -34,7 +34,7 @@ export const TextBoxSubtitle = styled.h3`
   margin-inline-start: 0;
 `;
 
-export const TextBoxDescription = styled.p`
+export const TextBoxDescription = styled.div`
   color: var(--color-text);
   font-size: 1em;
   font-weight: 400;

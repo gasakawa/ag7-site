@@ -17,11 +17,15 @@ const Services = (data: IServices) => {
   ];
 
   return (
-    <S.ServicesWrapper id='servicios'>
-      <S.ServicesSection>
-        <S.ServiceTextBlock>
-          <TextBox {...data.textBox} />
-        </S.ServiceTextBlock>
+    <>
+      <S.ServicesWrapper id='servicios'>
+        <S.ServicesSection>
+          <S.ServiceTextBlock>
+            <TextBox {...data.textBox} />
+          </S.ServiceTextBlock>
+        </S.ServicesSection>
+      </S.ServicesWrapper>
+      <S.ServicesCardsSection>
         <S.ServicesCardsWrapper>
           {data.cards.map((card: ICardWithIcon, pos: number) => (
             <CardWithIcon
@@ -35,8 +39,8 @@ const Services = (data: IServices) => {
             />
           ))}
         </S.ServicesCardsWrapper>
-      </S.ServicesSection>
-    </S.ServicesWrapper>
+      </S.ServicesCardsSection>
+    </>
   );
 };
 
