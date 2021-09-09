@@ -1,6 +1,6 @@
 import React from 'react';
 import type { GetStaticProps } from 'next';
-import Header from '../components/Header';
+import Header from '../components/Sections/Header';
 
 import { getHeaderData } from '../lib/header';
 import IHeader from '../interfaces/i-header';
@@ -21,6 +21,9 @@ import IServices from '../interfaces/i-services';
 import Services from '../components/Sections/Services';
 import IClient from '../interfaces/i-client';
 import Client from '../components/Sections/Client';
+import { getFooterData } from '../lib/footer';
+import IFooter from '../interfaces/i-footer';
+import Footer from '../components/Sections/Footer';
 
 const Home = ({
   header,
@@ -29,6 +32,7 @@ const Home = ({
   whatWeDo,
   services,
   clients,
+  footer,
 }: {
   header: IHeader;
   heading: IPageImage;
@@ -36,6 +40,7 @@ const Home = ({
   whatWeDo: IWhatWeDo;
   services: IServices;
   clients: IClient;
+  footer: IFooter;
 }) => {
   return (
     <>
@@ -46,6 +51,7 @@ const Home = ({
       <WhatWeDo {...whatWeDo} />
       <Services {...services} />
       <Client {...clients} />
+      <Footer {...footer} />
     </>
   );
 };
@@ -58,6 +64,7 @@ export const getStaticProps: GetStaticProps = async context => {
   const whatWeDo = await getWhatWeDo('what-we-do', locale);
   const services = await getServices('services', locale);
   const clients = await getClients('clients', locale);
+  const footer = await getFooterData(locale);
 
   return {
     props: {
@@ -67,6 +74,7 @@ export const getStaticProps: GetStaticProps = async context => {
       whatWeDo,
       services,
       clients,
+      footer,
     },
   };
 };

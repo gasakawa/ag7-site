@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 
-import IHeader from '../../interfaces/i-header';
-import Menu from '../Menu';
+import IHeader from '../../../interfaces/i-header';
+import Menu from '../../Menu';
 
-import * as S from '../../styles/header';
-import Flags from '../Flags';
+import * as S from '../../../styles/header';
+import Flags from '../../Flags';
 
 const Header = (data: IHeader) => {
   return (
