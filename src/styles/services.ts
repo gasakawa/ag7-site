@@ -25,11 +25,15 @@ export const ServiceTextBlock = styled.div`
   margin-bottom: 15px;
 `;
 
-export const ServicesCardsSection = styled.section`
+export const ServicesCardsSection = styled.div`
   display: flex;
   justify-content: center;
   align-items: center;
   padding: 20px 0 30px 0;
+
+  ${media.lessThan('large')`
+    padding: 10px 0 20px 0;
+  `}
 `;
 
 export const ServicesCardsWrapper = styled.div`
@@ -40,6 +44,6 @@ export const ServicesCardsWrapper = styled.div`
 
   ${media.lessThan('large')`
     flex-direction: column;
-    width: 100%;
+    width: 80%
   `}
 `;

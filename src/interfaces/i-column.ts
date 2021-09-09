@@ -12,4 +12,5 @@ export default interface IColumn {
   Icon?: IImage;
   heading?: string;
   images?: IImage[];
+  link?: string;
 }

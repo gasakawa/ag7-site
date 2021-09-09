@@ -3,9 +3,10 @@ import styled from 'styled-components';
 export const SliderWrapper = styled.div`
   display: flex;
   align-items: center;
-  justify-content: center;
-  width: 80%;
-  background-color: #f6f6f6;
+  justify-content: space-between;
+  width: 70%;
 `;
 
-export const SliderImage = styled.div``;
+export const SliderImage = styled.div`
+  object-fit: contain;
+`;

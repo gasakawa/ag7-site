@@ -10,6 +10,7 @@ import IWhatWeDo from '../interfaces/i-what-we-do';
 import ICardWithIcon from '../interfaces/i-card-with-icon';
 import IServices from '../interfaces/i-services';
 import IClient from '../interfaces/i-client';
+import IImageWithLink from '../interfaces/i-image-with-link';
 
 export const getHeadingData = async (
   name: string,
@@ -149,9 +150,9 @@ export const getClients = async (
     .filter((col: IColumn) => col.__component === 'page.text-block')
     .shift() as IColumn;
 
-  const images = data[0].columns
-    .filter((col: IColumn) => col.__component === 'page.slider')
-    .shift() as IColumn;
+  const images = data[0].columns.filter(
+    (col: IColumn) => col.__component === 'page.image-with-link',
+  ) as IColumn[];
 
   const textBox = {
     id: textBlock.id,
@@ -161,10 +162,13 @@ export const getClients = async (
     description: textBlock.Description,
   } as ITextBox;
 
-  const slider = images.images || [];
+  const imagesWithLink = images.map(image => ({
+    link: image.link,
+    image: image.Image,
+  })) as IImageWithLink[];
 
   return {
     textBox,
-    slider,
+    slider: imagesWithLink,
   };
 };

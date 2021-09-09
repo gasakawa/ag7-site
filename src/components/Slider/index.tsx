@@ -1,11 +1,11 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
-import IImage from '../../interfaces/i-image';
 
 import * as S from '../../styles/slider';
+import IImageWithLink from '../../interfaces/i-image-with-link';
 
 interface SliderProps {
-  images: IImage[];
+  images: IImageWithLink[];
 }
 
 const Slider = ({ images }: SliderProps) => {
@@ -28,15 +28,15 @@ const Slider = ({ images }: SliderProps) => {
   // }, []);
   return (
     <S.SliderWrapper>
-      {images.map((image: IImage, pos: number) => {
-        if (pos < maxImagePosition) {
+      {images.map((image: IImageWithLink, pos: number) => {
+        if (pos >= 0 && pos < 4) {
           return (
             <Image
-              key={image.id}
-              src={image.url}
-              width={image.width}
-              height={image.height}
-              alt={image.alternativeText}
+              key={image.image.id}
+              src={image.image.url}
+              width={image.image.width}
+              height={image.image.height}
+              alt={image.image.alternativeText}
             />
           );
         }
