@@ -19,8 +19,10 @@ const Header = (data: IHeader) => {
           layout={'intrinsic'}
         />
         <Menu {...data} />
-        <Flags />
       </S.HeaderMenu>
+      <S.HeaderFlags>
+        <Flags />
+      </S.HeaderFlags>
     </S.HeaderWrapper>
   );
 };

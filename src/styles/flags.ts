@@ -9,8 +9,4 @@ export const HeaderFlags = styled.div`
   span {
     margin: 5px;
   }
-
-  ${media.lessThan('large')`
-    display: none;
-  `}
 `;

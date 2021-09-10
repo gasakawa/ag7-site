@@ -6,6 +6,8 @@ export const HeaderWrapper = styled.header`
   align-items: center;
   justify-content: center;
   position: sticky;
+  top: 0;
+  z-index: 1;
   width: 100vw;
   padding: 10px 0 10px 0;
 
@@ -24,5 +26,15 @@ export const HeaderMenu = styled.div`
 
   ${media.lessThan('large')`
   justify-content: space-between;
+  `}
+`;
+
+export const HeaderFlags = styled.div`
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  ${media.lessThan('large')`
+   display: none;
   `}
 `;

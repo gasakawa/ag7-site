@@ -25,6 +25,7 @@ import { getFooterData } from '../lib/footer';
 import IFooter from '../interfaces/i-footer';
 import Footer from '../components/Sections/Footer';
 import Whatsapp from '../components/Whatsapp';
+import Burger from '../components/Burger';
 
 const Home = ({
   header,
@@ -48,7 +49,7 @@ const Home = ({
   return (
     <>
       <Header {...header} />
-      {/* <Burger {...header} /> */}
+      <Burger {...header} />
       <Heading {...heading} />
       <AboutUs {...aboutUs} />
       <WhatWeDo {...whatWeDo} />

@@ -14,7 +14,9 @@ export const BurgerWrapper = styled.div`
     top: 0;
     margin-right: 20px;
     margin-top: 10px;
-    
+    position: fixed;
+    z-index: 5;
+    right: 0;
   `}
 `;
 
@@ -23,18 +25,19 @@ export const BurgerMenu = styled.div<BurgerProps>`
     props.isOpen
       ? css`
           display: flex;
+          flex-direction: column;
         `
       : css`
           display: none;
         `}
 
-  position: absolute;
+  position: fixed;
   height: 100vh;
-  background-color: var(--color-primary);
-  margin-top: 69px;
+  background-color: rgba(0, 0, 0, 0.8);
   right: 0;
   width: 300px;
   padding: 30px 15px;
+  z-index: 5;
 
   ul {
     list-style-type: none;
@@ -51,4 +54,10 @@ export const BurgerMenu = styled.div<BurgerProps>`
       }
     }
   }
+`;
+
+export const BurgerFlags = styled.div`
+  display: flex;
+  justify-content: start;
+  margin-top: 20px;
 `;

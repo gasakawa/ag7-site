@@ -5,6 +5,7 @@ import Hamburger from 'hamburger-react';
 
 import IHeader from '../../interfaces/i-header';
 import * as S from '../../styles/burger';
+import Flags from '../Flags';
 
 const Burger = (data: IHeader) => {
   const [isOpen, setOpen] = useState(false);
@@ -35,6 +36,9 @@ const Burger = (data: IHeader) => {
             </li>
           ))}
         </ul>
+        <S.BurgerFlags>
+          <Flags />
+        </S.BurgerFlags>
       </S.BurgerMenu>
     </>
   );
