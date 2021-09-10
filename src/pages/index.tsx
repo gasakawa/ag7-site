@@ -24,6 +24,7 @@ import Client from '../components/Sections/Client';
 import { getFooterData } from '../lib/footer';
 import IFooter from '../interfaces/i-footer';
 import Footer from '../components/Sections/Footer';
+import Whatsapp from '../components/Whatsapp';
 
 const Home = ({
   header,
@@ -33,6 +34,7 @@ const Home = ({
   services,
   clients,
   footer,
+  locale,
 }: {
   header: IHeader;
   heading: IPageImage;
@@ -41,6 +43,7 @@ const Home = ({
   services: IServices;
   clients: IClient;
   footer: IFooter;
+  locale: string;
 }) => {
   return (
     <>
@@ -52,6 +55,7 @@ const Home = ({
       <Services {...services} />
       <Client {...clients} />
       <Footer {...footer} />
+      <Whatsapp locale={locale} />
     </>
   );
 };
@@ -75,6 +79,7 @@ export const getStaticProps: GetStaticProps = async context => {
       services,
       clients,
       footer,
+      locale,
     },
   };
 };
