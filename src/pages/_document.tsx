@@ -44,11 +44,7 @@ export default class MyDocument extends Document {
             href='https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap'
             rel='stylesheet'
           ></link>
-          <link
-            rel='shortcut icon'
-            type='image/png'
-            href='./consorcios/favicon.png'
-          />
+          <link rel='shortcut icon' type='image/png' href='./favicon.png' />
           <script
             dangerouslySetInnerHTML={{
               __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
