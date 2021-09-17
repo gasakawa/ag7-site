@@ -3,9 +3,9 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Hamburger from 'hamburger-react';
 
-import IHeader from '../../interfaces/i-header';
-import * as S from '../../styles/burger';
-import Flags from '../Flags';
+import IHeader from 'interfaces/i-header';
+import * as S from 'styles/burger';
+import Flags from 'components/Flags';
 
 const Burger = (data: IHeader) => {
   const [isOpen, setOpen] = useState(false);

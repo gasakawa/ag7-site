@@ -1,9 +1,9 @@
 import React from 'react';
-import TextBox from '../../TextBox';
+import TextBox from 'components/TextBox';
 
-import * as S from '../../../styles/about-us';
-import IAboutUs from '../../../interfaces/i-about-us';
-import CardOnlyText from '../../CardOnlyText';
+import * as S from 'styles/about-us';
+import IAboutUs from 'interfaces/i-about-us';
+import CardOnlyText from 'components/CardOnlyText';
 
 const AboutUs = (data: IAboutUs) => {
   return (

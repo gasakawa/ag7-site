@@ -1,7 +1,7 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
 
-import GlobalStyles from '../styles/global';
+import GlobalStyles from 'styles/global';
 
 function MyApp({ Component, pageProps }: AppProps) {
   return (
@@ -55,6 +55,7 @@ function MyApp({ Component, pageProps }: AppProps) {
           content='width=device-width,minimum-scale=1,initial-scale=1.0'
         ></meta>
         <link rel='shortcut icon' href='favicon.png' />
+        <link rel='apple-touch-icon' href='favicon.png' />
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />

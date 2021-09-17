@@ -2,7 +2,7 @@ import Link from 'next/link';
 import React from 'react';
 import Image from 'next/image';
 
-import { HeaderFlags } from '../../styles/flags';
+import { HeaderFlags } from 'styles/flags';
 
 const Flags = () => {
   return (

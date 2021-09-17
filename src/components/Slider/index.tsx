@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from 'react';
 import Image from 'next/image';
 
-import * as S from '../../styles/slider';
-import IImageWithLink from '../../interfaces/i-image-with-link';
+import * as S from 'styles/slider';
+import IImageWithLink from 'interfaces/i-image-with-link';
 
 interface SliderProps {
   images: IImageWithLink[];

@@ -1,10 +1,10 @@
 import React from 'react';
 
-import IClient from '../../../interfaces/i-client';
-import TextBox from '../../TextBox';
+import IClient from 'interfaces/i-client';
+import TextBox from 'components/TextBox';
 
-import * as S from '../../../styles/client';
-import Gallery from '../../Gallery';
+import * as S from 'styles/client';
+import Gallery from 'components/Gallery';
 
 const Client = (data: IClient) => {
   return (

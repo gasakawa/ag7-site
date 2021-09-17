@@ -1,10 +1,10 @@
 import React from 'react';
-import ICardWithIcon from '../../../interfaces/i-card-with-icon';
-import IServices from '../../../interfaces/i-services';
+import ICardWithIcon from 'interfaces/i-card-with-icon';
+import IServices from 'interfaces/i-services';
 
-import * as S from '../../../styles/services';
-import CardWithIcon from '../../CardWithIcon';
-import TextBox from '../../TextBox';
+import * as S from 'styles/services';
+import CardWithIcon from 'components/CardWithIcon';
+import TextBox from 'components/TextBox';
 
 const Services = (data: IServices) => {
   const iconStyles = [

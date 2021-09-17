@@ -1,8 +1,8 @@
 import React, { FC } from 'react';
 import ReactMarkdown from 'react-markdown';
-import ITextBox from '../../interfaces/i-textbox';
+import ITextBox from 'interfaces/i-textbox';
 
-import * as S from '../../styles/textbox';
+import * as S from 'styles/textbox';
 
 const TextBox = (data: ITextBox) => {
   return (

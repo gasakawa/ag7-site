@@ -1,9 +1,9 @@
 import React from 'react';
 import Image from 'next/image';
 
-import IImageWithLink from '../../interfaces/i-image-with-link';
+import IImageWithLink from 'interfaces/i-image-with-link';
 
-import * as S from '../../styles/gallery';
+import * as S from 'styles/gallery';
 
 interface GalleryProps {
   images: IImageWithLink[];

@@ -5,7 +5,7 @@ import IHeader from '../../../interfaces/i-header';
 import Menu from '../../Menu';
 
 import * as S from '../../../styles/header';
-import Flags from '../../Flags';
+import Flags from 'components/Flags';
 
 const Header = (data: IHeader) => {
   return (

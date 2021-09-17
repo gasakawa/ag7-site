@@ -1,11 +1,11 @@
 import React from 'react';
 import Image from 'next/image';
 
-import IWhatWeDo from '../../../interfaces/i-what-we-do';
-import TextBox from '../../TextBox';
+import IWhatWeDo from 'interfaces/i-what-we-do';
+import TextBox from 'components/TextBox';
 
-import * as S from '../../../styles/what-we-do';
-import ICardWithImageText from '../../../interfaces/i-card-with-image-text';
+import * as S from 'styles/what-we-do';
+import ICardWithImageText from 'interfaces/i-card-with-image-text';
 
 const WhatWeDo = (data: IWhatWeDo) => {
   return (

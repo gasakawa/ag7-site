@@ -1,9 +1,9 @@
 import Link from 'next/link';
 import React from 'react';
 import { useState } from 'react';
-import IHeader from '../../interfaces/i-header';
+import IHeader from 'interfaces/i-header';
 
-import * as S from '../../styles/menu';
+import * as S from 'styles/menu';
 
 const Menu = (data: IHeader) => {
   const [isOpen, setOpen] = useState(false);

@@ -2,7 +2,7 @@ import React, { useEffect, useState } from 'react';
 import { useSpring } from 'react-spring';
 import { FaWhatsapp } from 'react-icons/fa';
 
-import * as S from '../../styles/whatsapp';
+import * as S from 'styles/whatsapp';
 
 interface WhatsappProps {
   locale: string;

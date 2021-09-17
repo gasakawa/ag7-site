@@ -3,7 +3,7 @@ import Image from 'next/image';
 
 import IPageImage from '../../../interfaces/i-page-image';
 
-import * as S from '../../../styles/heading';
+import * as S from 'styles/heading';
 
 const Heading = (headingData: IPageImage) => {
   const { id, title, image } = headingData;

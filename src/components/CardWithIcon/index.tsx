@@ -1,7 +1,7 @@
 import React from 'react';
 import Image from 'next/image';
 
-import * as S from '../../styles/card-with-icon';
+import * as S from 'styles/card-with-icon';
 
 interface CardWithIconProps {
   title: string;

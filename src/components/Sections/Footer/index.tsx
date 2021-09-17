@@ -1,7 +1,7 @@
 import React from 'react';
-import IFooter from '../../../interfaces/i-footer';
+import IFooter from 'interfaces/i-footer';
 
-import * as S from '../../../styles/footer';
+import * as S from 'styles/footer';
 
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
 
