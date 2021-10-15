@@ -35,13 +35,24 @@ const Whatsapp = ({ locale }: WhatsappProps) => {
         <span>{message}</span>
       </S.WhasappText>
       <S.WhatsappIcon>
-        <a
-          href='https://api.whatsapp.com/send?phone=573167724179'
-          target='_blank'
-          rel='noreferrer'
-        >
-          <FaWhatsapp size={24} />
-        </a>
+        {locale === 'es' ? (
+          <a
+            href='https://api.whatsapp.com/send?phone=573167724179'
+            target='_blank'
+            rel='noreferrer'
+          >
+            <FaWhatsapp size={24} />
+          </a>
+        ) : (
+          <a
+            href='https://api.whatsapp.com/send?phone=5511999706020'
+            target='_blank'
+            rel='noreferrer'
+          >
+            {' '}
+            <FaWhatsapp size={24} />
+          </a>
+        )}
       </S.WhatsappIcon>
     </S.WhatsappWrapper>
   );
