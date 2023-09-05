@@ -1,5 +1,4 @@
 import React, { FC } from 'react';
-import ICardOnlyText from 'interfaces/i-card-only-text';
 
 import * as S from 'styles/card-only-text';
 
@@ -18,7 +17,7 @@ const CardOnlyText: FC<CardOnlyTextProps> = ({
   title,
   bodyColor,
   description,
-  borderHoverColor,
+  borderHoverColor
 }: CardOnlyTextProps) => {
   return (
     <S.CardOnlyTextWrapper

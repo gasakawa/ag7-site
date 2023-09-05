@@ -20,9 +20,6 @@ const Header = (data: IHeader) => {
         />
         <Menu {...data} />
       </S.HeaderMenu>
-      <S.HeaderFlags>
-        <Flags />
-      </S.HeaderFlags>
     </S.HeaderWrapper>
   );
 };

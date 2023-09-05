@@ -36,9 +36,9 @@ const Burger = (data: IHeader) => {
             </li>
           ))}
         </ul>
-        <S.BurgerFlags>
+        {/* <S.BurgerFlags>
           <Flags />
-        </S.BurgerFlags>
+        </S.BurgerFlags> */}
       </S.BurgerMenu>
     </>
   );

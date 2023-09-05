@@ -12,14 +12,14 @@ interface ISocialIcon {
 const Footer = (data: IFooter) => {
   const icons = {
     Instagram: <FaInstagram />,
-    LinkedIn: <FaLinkedin />,
+    LinkedIn: <FaLinkedin />
   } as ISocialIcon;
   return (
     <S.FooterWrapper>
       <S.FooterContact>
         <p>{data.contact}</p>
         <S.FooterSocialIcons>
-          {data.socialLinks.map(icon => (
+          {data.socialLink.map(icon => (
             <a
               href={icon.url}
               key={icon.id}

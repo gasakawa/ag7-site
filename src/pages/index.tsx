@@ -9,7 +9,7 @@ import {
   getAboutUs,
   getWhatWeDo,
   getServices,
-  getClients,
+  getClients
 } from '../lib/sections';
 import IPageImage from 'interfaces/i-page-image';
 import Heading from 'components/Sections/Heading';
@@ -34,8 +34,7 @@ const Home = ({
   whatWeDo,
   services,
   clients,
-  footer,
-  locale,
+  footer
 }: {
   header: IHeader;
   heading: IPageImage;
@@ -44,7 +43,6 @@ const Home = ({
   services: IServices;
   clients: IClient;
   footer: IFooter;
-  locale: string;
 }) => {
   return (
     <>
@@ -56,20 +54,19 @@ const Home = ({
       <Services {...services} />
       <Client {...clients} />
       <Footer {...footer} />
-      <Whatsapp locale={locale} />
+      <Whatsapp />
     </>
   );
 };
 
 export const getStaticProps: GetStaticProps = async context => {
-  const { locale } = context;
-  const header = await getHeaderData(locale);
-  const heading = await getHeadingData('first-section', locale);
-  const aboutUs = await getAboutUs('about-us', locale);
-  const whatWeDo = await getWhatWeDo('what-we-do', locale);
-  const services = await getServices('services', locale);
-  const clients = await getClients('clients', locale);
-  const footer = await getFooterData(locale);
+  const header = await getHeaderData();
+  const heading = await getHeadingData('first-section');
+  const aboutUs = await getAboutUs('about-us');
+  const whatWeDo = await getWhatWeDo('what-we-do');
+  const services = await getServices('services');
+  const clients = await getClients('clients');
+  const footer = await getFooterData();
 
   return {
     props: {
@@ -79,9 +76,8 @@ export const getStaticProps: GetStaticProps = async context => {
       whatWeDo,
       services,
       clients,
-      footer,
-      locale,
-    },
+      footer
+    }
   };
 };
 
