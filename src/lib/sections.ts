@@ -157,9 +157,29 @@ export const getServices = async (name: string): Promise<IServices> => {
 };
 
 export const getClients = async (name: string): Promise<IClient> => {
-  const { data } = await api.get(
-    `/sections?populate[column][populate]=*&filters[Name][$eq]=${name}`
+  const query = qs.stringify(
+    {
+      populate: {
+        column: {
+          on: {
+            'page.text-block': {
+              populate: '*'
+            },
+            'page.image-with-link': {
+              populate: '*'
+            }
+          }
+        }
+      },
+      filters: {
+        Name: {
+          $eq: name
+        }
+      }
+    },
+    { encodeValuesOnly: true }
   );
+  const { data } = await api.get(`/sections?${query}`);
 
   const textBlock = data[0].columns
     .filter((col: IColumn) => col.__component === 'page.text-block')
