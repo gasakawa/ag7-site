@@ -36,7 +36,7 @@ const Slider = ({ images }: SliderProps) => {
               src={image.image.url}
               width={image.image.width}
               height={image.image.height}
-              alt={image.image.alternativeText}
+              alt={image.image.alternativeText ?? ''}
             />
           );
         }

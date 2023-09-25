@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 
-interface CardWithIconProps {
-  iconBackgroundColor: string;
-  iconBorderRadius: string;
-}
-
 export const CardWithIconWrapper = styled.div`
   display: flex;
   align-items: flex-start;
@@ -23,10 +18,13 @@ export const CardWithIconWrapper = styled.div`
   `}
 `;
 
-export const CartdWithIconImage = styled.div<CardWithIconProps>`
+export const CardWithIconImage = styled.div<{
+  $iconBackgroundColor: string;
+  $iconBorderRadius: string;
+}>`
   display: flex;
-  border-radius: ${props => props.iconBorderRadius};
-  background-color: ${props => props.iconBackgroundColor};
+  border-radius: ${props => props.$iconBorderRadius};
+  background-color: ${props => props.$iconBackgroundColor};
   padding: 30px;
 `;
 

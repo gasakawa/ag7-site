@@ -1,11 +1,6 @@
 import styled from 'styled-components';
 import media from 'styled-media-query';
 
-interface GalleryProps {
-  maxWidth: string;
-  maxHeight: string;
-}
-
 export const GalleryWrapper = styled.div`
   display: flex;
   align-items: center;
@@ -28,14 +23,17 @@ export const GalleryItems = styled.div`
   `}
 `;
 
-export const GalleryItem = styled.div<GalleryProps>`
+export const GalleryItem = styled.div<{
+  $maxWidth: string;
+  $maxHeight: string;
+}>`
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 
   img {
-    max-width: ${props => props.maxWidth};
-    max-height: ${props => props.maxHeight};
+    max-width: ${props => props.$maxWidth};
+    max-height: ${props => props.$maxHeight};
   }
 `;

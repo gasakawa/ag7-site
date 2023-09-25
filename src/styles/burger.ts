@@ -1,10 +1,6 @@
 import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
 
-interface BurgerProps {
-  isOpen: boolean;
-}
-
 export const BurgerWrapper = styled.div`
   display: none;
 
