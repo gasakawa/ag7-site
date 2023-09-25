@@ -26,7 +26,7 @@ const Burger = (data: IHeader) => {
         />
       </S.BurgerWrapper>
 
-      <S.BurgerMenu isOpen={isOpen}>
+      <S.BurgerMenu $isOpen={isOpen}>
         <ul>
           {data.links.map(link => (
             <li key={link.id}>

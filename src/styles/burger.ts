@@ -20,9 +20,9 @@ export const BurgerWrapper = styled.div`
   `}
 `;
 
-export const BurgerMenu = styled.div<BurgerProps>`
+export const BurgerMenu = styled.div<{ $isOpen: boolean }>`
   ${props =>
-    props.isOpen
+    props.$isOpen
       ? css`
           display: flex;
           flex-direction: column;

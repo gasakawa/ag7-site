@@ -16,7 +16,6 @@ const Header = (data: IHeader) => {
           width={100}
           height={48.16}
           alt={data.logo.alt}
-          layout={'intrinsic'}
         />
         <Menu {...data} />
       </S.HeaderMenu>
