@@ -59,7 +59,7 @@ const Home = ({
   );
 };
 
-export const getStaticProps: GetStaticProps = async context => {
+export const getStaticProps: GetStaticProps = async () => {
   const header = await getHeaderData();
   const heading = await getHeadingData('first-section');
   const aboutUs = await getAboutUs('about-us');
