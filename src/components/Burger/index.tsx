@@ -30,8 +30,8 @@ const Burger = (data: IHeader) => {
         <ul>
           {data.links.map(link => (
             <li key={link.id}>
-              <Link href={link.url}>
-                <a onClick={() => setOpen(false)}>{link.label}</a>
+              <Link href={link.url} onClick={() => setOpen(false)}>
+                {link.label}
               </Link>
             </li>
           ))}
