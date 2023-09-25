@@ -14,9 +14,7 @@ const Menu = (data: IHeader) => {
         <ul>
           {data.links.map(link => (
             <li key={link.id}>
-              <Link href={link.url}>
-                <a>{link.label}</a>
-              </Link>
+              <Link href={link.url}>{link.label}</Link>
             </li>
           ))}
         </ul>

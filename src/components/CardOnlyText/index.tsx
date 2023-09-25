@@ -21,11 +21,13 @@ const CardOnlyText: FC<CardOnlyTextProps> = ({
 }: CardOnlyTextProps) => {
   return (
     <S.CardOnlyTextWrapper
-      backgroundColor={backgroundColor}
-      borderHoverColor={borderHoverColor}
+      $backgroundColor={backgroundColor}
+      $borderHoverColor={borderHoverColor}
     >
-      <S.CardOnlyTextTitle titleColor={titleColor}>{title}</S.CardOnlyTextTitle>
-      <S.CardOnlyTextDescription bodyColor={bodyColor}>
+      <S.CardOnlyTextTitle $titleColor={titleColor}>
+        {title}
+      </S.CardOnlyTextTitle>
+      <S.CardOnlyTextDescription $bodyColor={bodyColor}>
         {description}
       </S.CardOnlyTextDescription>
     </S.CardOnlyTextWrapper>

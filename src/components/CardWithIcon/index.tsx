@@ -18,16 +18,16 @@ const CardWithIcon = ({
   iconUrl,
   iconAlt,
   iconBackgroundColor,
-  iconBorderRadius,
+  iconBorderRadius
 }: CardWithIconProps) => {
   return (
     <S.CardWithIconWrapper>
-      <S.CartdWithIconImage
-        iconBackgroundColor={iconBackgroundColor}
-        iconBorderRadius={iconBorderRadius}
+      <S.CardWithIconImage
+        $iconBackgroundColor={iconBackgroundColor}
+        $iconBorderRadius={iconBorderRadius}
       >
         <Image src={iconUrl} width={34} height={40} alt={iconAlt} />
-      </S.CartdWithIconImage>
+      </S.CardWithIconImage>
       <S.CardWithIconTitle>{title}</S.CardWithIconTitle>
       <S.CardWithIconDescription>{description}</S.CardWithIconDescription>
     </S.CardWithIconWrapper>

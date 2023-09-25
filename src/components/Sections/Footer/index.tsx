@@ -4,6 +4,7 @@ import IFooter from 'interfaces/i-footer';
 import * as S from 'styles/footer';
 
 import { FaInstagram, FaLinkedin } from 'react-icons/fa';
+import Link from 'next/link';
 
 interface ISocialIcon {
   [key: string]: Object;
@@ -13,21 +14,21 @@ const Footer = (data: IFooter) => {
   const icons = {
     Instagram: <FaInstagram />,
     LinkedIn: <FaLinkedin />
-  } as ISocialIcon;
+  } as any;
   return (
     <S.FooterWrapper>
       <S.FooterContact>
         <p>{data.contact}</p>
         <S.FooterSocialIcons>
           {data.socialLink.map(icon => (
-            <a
+            <Link
               href={icon.url}
               key={icon.id}
               target='_blank'
               rel='norefferer noreferrer'
             >
               {icons[icon.brand]}
-            </a>
+            </Link>
           ))}
         </S.FooterSocialIcons>
       </S.FooterContact>

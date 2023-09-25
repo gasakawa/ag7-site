@@ -17,15 +17,16 @@ const Gallery = ({ images }: GalleryProps) => {
           return (
             <S.GalleryItem
               key={image.image.id}
-              maxHeight={`${image.image.height}px`}
-              maxWidth={`${image.image.width}px`}
+              $maxHeight={`${image.image.height}px`}
+              $maxWidth={`${image.image.width}px`}
             >
               <a href={image.link} target='_blank' rel='noreferrer'>
                 <Image
                   src={image.image.url}
                   width={image.image.width}
                   height={image.image.height}
-                  alt={image.image.alternativeText}
+                  alt={image.image.alternativeText ?? ''}
+                  priority={true}
                 />
               </a>
             </S.GalleryItem>

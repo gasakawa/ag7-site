@@ -3,8 +3,9 @@ import Document, {
   Html,
   Head,
   Main,
-  NextScript,
+  NextScript
 } from 'next/document';
+import Script from 'next/script';
 import { ServerStyleSheet } from 'styled-components';
 
 export default class MyDocument extends Document {
@@ -15,7 +16,7 @@ export default class MyDocument extends Document {
     try {
       ctx.renderPage = () =>
         originalRenderPage({
-          enhanceApp: App => props => sheet.collectStyles(<App {...props} />),
+          enhanceApp: App => props => sheet.collectStyles(<App {...props} />)
         });
 
       const initialProps = await Document.getInitialProps(ctx);
@@ -26,7 +27,7 @@ export default class MyDocument extends Document {
             {initialProps.styles}
             {sheet.getStyleElement()}
           </>
-        ),
+        )
       };
     } finally {
       sheet.seal();
@@ -45,15 +46,13 @@ export default class MyDocument extends Document {
             rel='stylesheet'
           ></link>
           <link rel='shortcut icon' type='image/png' href='./favicon.png' />
-          <script
-            dangerouslySetInnerHTML={{
-              __html: `(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+          <Script id='gtm-code'>
+            {`(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
               new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
               j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
               'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-              })(window,document,'script','dataLayer','GTM-MKHNCJL');`,
-            }}
-          ></script>
+              })(window,document,'script','dataLayer','GTM-MKHNCJL');`}
+          </Script>
         </Head>
         <body>
           <noscript
@@ -61,7 +60,7 @@ export default class MyDocument extends Document {
               __html: `<!-- Google Tag Manager (noscript) -->
               <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MKHNCJL"
               height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
-              <!-- End Google Tag Manager (noscript) -->`,
+              <!-- End Google Tag Manager (noscript) -->`
             }}
           ></noscript>
           <Main />

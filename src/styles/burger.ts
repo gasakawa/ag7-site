@@ -1,10 +1,6 @@
 import styled, { css } from 'styled-components';
 import media from 'styled-media-query';
 
-interface BurgerProps {
-  isOpen: boolean;
-}
-
 export const BurgerWrapper = styled.div`
   display: none;
 
@@ -20,9 +16,9 @@ export const BurgerWrapper = styled.div`
   `}
 `;
 
-export const BurgerMenu = styled.div<BurgerProps>`
+export const BurgerMenu = styled.div<{ $isOpen: boolean }>`
   ${props =>
-    props.isOpen
+    props.$isOpen
       ? css`
           display: flex;
           flex-direction: column;

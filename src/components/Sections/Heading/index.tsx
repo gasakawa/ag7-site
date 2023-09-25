@@ -16,7 +16,7 @@ const Heading = (headingData: IPageImage) => {
             src={image.url}
             width={540}
             height={470}
-            alt={image.alternativeText}
+            alt={image.alternativeText ?? ''}
           />
         </S.HeadingImage>
         <S.HeadingTitle>
