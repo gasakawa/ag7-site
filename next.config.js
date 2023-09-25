@@ -2,10 +2,13 @@
 module.exports = {
   reactStrictMode: true,
   i18n: {
-    locales: ['es', 'pt'],
-    defaultLocale: 'es',
+    locales: ['pt-BR'],
+    defaultLocale: 'pt-BR'
   },
   images: {
-    domains: ['ag7digital-site.s3.amazonaws.com'],
+    domains: ['ag7digital-site.s3.amazonaws.com']
   },
+  compiler: {
+    styledComponents: true
+  }
 };

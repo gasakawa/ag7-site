@@ -5,5 +5,5 @@ export default interface IFooter {
   locale: string;
   contact: string;
   copyright: string;
-  socialLinks: ISocialLink[];
+  socialLink: ISocialLink[];
 }

@@ -11,6 +11,7 @@ export const GalleryWrapper = styled.div`
   align-items: center;
   justify-content: center;
   background-color: #f6f6f6;
+  padding-bottom: 3rem;
 `;
 
 export const GalleryItems = styled.div`
@@ -22,7 +23,7 @@ export const GalleryItems = styled.div`
 
   ${media.lessThan('large')`
     margin: 2.755rem 1rem 0 0;
-    grid-template-columns: repeat(1, 1fr);
+    grid-template-columns: repeat(2, 1fr);
 
   `}
 `;
