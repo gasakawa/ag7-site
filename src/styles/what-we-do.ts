@@ -36,16 +36,17 @@ export const WhatWeDoCard = styled.div`
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-between;
-  margin: 20px;
-
-  ${media.lessThan('large')`
-    margin: 0;
-  `}
+  margin: 1rem;
 
   h2 {
     margin: 30px 0;
     color: var(--color-primary);
     font-size: 1.5rem;
+
+    ${media.lessThan('large')`
+      margin: 1rem 3rem;
+      font-size: 1.3rem;
+    `}
   }
 
   p {
@@ -53,6 +54,11 @@ export const WhatWeDoCard = styled.div`
     font-size: 1rem;
     line-height: 1.5rem;
     margin-bottom: 25px;
+
+    ${media.lessThan('large')`
+      margin: 1rem 3rem   ;
+      font-size: 1rem;
+    `}
   }
 
   hr {
@@ -70,6 +76,6 @@ export const WhatWeDoImage = styled.div`
   margin: 0;
 
   ${media.lessThan('large')`
-      margin:  20px 0;
-  `}
+        margin:20px 0;
+    `}
 `;

@@ -18,7 +18,7 @@ export const GalleryItems = styled.div`
 
   ${media.lessThan('large')`
     margin: 2.755rem 1rem 0 0;
-    grid-template-columns: repeat(2, 1fr);
+    grid-template-columns: repeat(1, 1fr);
 
   `}
 `;
