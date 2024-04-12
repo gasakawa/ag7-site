@@ -9,6 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@next/third-parties": "^14.2.0",
     "axios": "^1.5.0",
     "hamburger-react": "^2.5.0",
     "next": "^13.5.3",

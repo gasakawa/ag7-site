@@ -1,5 +1,6 @@
 import type { AppProps } from 'next/app';
 import Head from 'next/head';
+import {GoogleTagManager} from '@next/third-parties/google'
 
 import GlobalStyles from 'styles/global';
 
@@ -56,9 +57,11 @@ function MyApp({ Component, pageProps }: AppProps) {
         ></meta>
         <link rel='shortcut icon' href='favicon.png' />
         <link rel='apple-touch-icon' href='favicon.png' />
+        
       </Head>
       <GlobalStyles />
       <Component {...pageProps} />
+      <GoogleTagManager gtmId='GTM-MKHNCJL' />
     </>
   );
 }

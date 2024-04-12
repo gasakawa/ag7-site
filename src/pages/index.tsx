@@ -29,7 +29,6 @@ import Burger from 'components/Burger';
 
 const Home = ({
   header,
-  heading,
   aboutUs,
   whatWeDo,
   services,
@@ -48,7 +47,7 @@ const Home = ({
     <>
       <Header {...header} />
       <Burger {...header} />
-      <Heading {...heading} />
+      <Heading  />
       <AboutUs {...aboutUs} />
       <WhatWeDo {...whatWeDo} />
       <Services {...services} />
@@ -61,7 +60,6 @@ const Home = ({
 
 export const getStaticProps: GetStaticProps = async () => {
   const header = await getHeaderData();
-  const heading = await getHeadingData('first-section');
   const aboutUs = await getAboutUs('about-us');
   const whatWeDo = await getWhatWeDo('what-we-do');
   const services = await getServices('services');
@@ -71,7 +69,6 @@ export const getStaticProps: GetStaticProps = async () => {
   return {
     props: {
       header,
-      heading,
       aboutUs,
       whatWeDo,
       services,

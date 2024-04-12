@@ -1,26 +1,24 @@
 import React from 'react';
 import Image from 'next/image';
 
-import IPageImage from '../../../interfaces/i-page-image';
 
 import * as S from 'styles/heading';
 
-const Heading = (headingData: IPageImage) => {
-  const { id, title, image } = headingData;
+const Heading = () => {
 
   return (
     <S.HeadingWrapper>
       <S.HeadingSection>
         <S.HeadingImage>
-          <Image
-            src={image.url}
+          <Image 
+            src="https://ag7digital-site.s3.amazonaws.com/img_top_01_9460ac5be9.png"
             width={540}
             height={470}
-            alt={image.alternativeText ?? ''}
+            alt="Guru Meditando"
           />
         </S.HeadingImage>
         <S.HeadingTitle>
-          <h1>{title}</h1>{' '}
+          <h1>Estratégias digitais para elevar seu negócio</h1>
         </S.HeadingTitle>
       </S.HeadingSection>
     </S.HeadingWrapper>
