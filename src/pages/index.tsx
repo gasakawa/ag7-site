@@ -2,10 +2,8 @@ import React from 'react';
 import type { GetStaticProps } from 'next';
 import Header from '../components/Sections/Header';
 
-import { getHeaderData } from '../lib/header';
 import IHeader from '../interfaces/i-header';
 import {
-  getHeadingData,
   getAboutUs,
   getWhatWeDo,
   getServices,
@@ -45,7 +43,7 @@ const Home = ({
 }) => {
   return (
     <>
-      <Header {...header} />
+      <Header />
       <Burger {...header} />
       <Heading  />
       <AboutUs {...aboutUs} />
@@ -59,7 +57,6 @@ const Home = ({
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const header = await getHeaderData();
   const aboutUs = await getAboutUs('about-us');
   const whatWeDo = await getWhatWeDo('what-we-do');
   const services = await getServices('services');
@@ -68,7 +65,6 @@ export const getStaticProps: GetStaticProps = async () => {
 
   return {
     props: {
-      header,
       aboutUs,
       whatWeDo,
       services,

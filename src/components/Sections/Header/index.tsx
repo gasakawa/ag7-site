@@ -1,23 +1,21 @@
 import React from 'react';
 import Image from 'next/image';
 
-import IHeader from '../../../interfaces/i-header';
 import Menu from '../../Menu';
 
 import * as S from '../../../styles/header';
-import Flags from 'components/Flags';
 
-const Header = (data: IHeader) => {
+const Header = () => {
   return (
     <S.HeaderWrapper>
       <S.HeaderMenu>
         <Image
-          src={data.logo.url}
+          src="https://ag7digital-site.s3.amazonaws.com/logo_blanco_2c1d6b1c69.png"
           width={100}
           height={48.16}
-          alt={data.logo.alt}
+          alt="Logo AG7 Digital Business"
         />
-        <Menu {...data} />
+        <Menu />
       </S.HeaderMenu>
     </S.HeaderWrapper>
   );
