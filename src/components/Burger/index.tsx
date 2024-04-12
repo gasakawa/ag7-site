@@ -3,11 +3,18 @@ import Link from 'next/link';
 import { useState } from 'react';
 import Hamburger from 'hamburger-react';
 
-import IHeader from 'interfaces/i-header';
 import * as S from 'styles/burger';
-import Flags from 'components/Flags';
 
-const Burger = (data: IHeader) => {
+
+const links = [
+  {id: 1, label: 'Inicio', url: '/'},
+  {id: 2, label: 'Sobre', url: '/#somos'},
+  {id: 3, label: 'Serviços', url: '/#servicios'},
+] 
+
+
+
+const Burger = () => {
   const [isOpen, setOpen] = useState(false);
 
   return (
@@ -28,7 +35,7 @@ const Burger = (data: IHeader) => {
 
       <S.BurgerMenu $isOpen={isOpen}>
         <ul>
-          {data.links.map(link => (
+          {links.map(link => (
             <li key={link.id}>
               <Link href={link.url} onClick={() => setOpen(false)}>
                 {link.label}
@@ -36,9 +43,6 @@ const Burger = (data: IHeader) => {
             </li>
           ))}
         </ul>
-        {/* <S.BurgerFlags>
-          <Flags />
-        </S.BurgerFlags> */}
       </S.BurgerMenu>
     </>
   );

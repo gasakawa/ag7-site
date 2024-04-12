@@ -44,7 +44,7 @@ const Home = ({
   return (
     <>
       <Header />
-      <Burger {...header} />
+      <Burger/>
       <Heading  />
       <AboutUs {...aboutUs} />
       <WhatWeDo {...whatWeDo} />
@@ -57,7 +57,7 @@ const Home = ({
 };
 
 export const getStaticProps: GetStaticProps = async () => {
-  const aboutUs = await getAboutUs('about-us');
+  const aboutUs = getAboutUs()
   const whatWeDo = await getWhatWeDo('what-we-do');
   const services = await getServices('services');
   const clients = await getClients('clients');

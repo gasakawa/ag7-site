@@ -35,37 +35,32 @@ export const getHeadingData = async (name: string): Promise<IPageImage> => {
   return headingData;
 };
 
-export const getAboutUs = async (name: string): Promise<IAboutUs> => {
-  const { data } = await api.get(
-    `/sections?populate[column][populate]=*&filters[Name][$eq]=${name}`
-  );
+export const getAboutUs = (): IAboutUs => { 
 
-  const textBlock = data[0].columns
-    .filter((col: IColumn) => col.__component === 'page.text-block')
-    .shift() as IColumn;
+  const textBlock = {
+    title: 'Time de profissionais apaixonados pelo que fazemos',
+    description: 'Acreditamos que nossos clientes possuem **objetivos** e **necessidades** diferentes, por este motivo nossa proposta de serviço é personalizada. Adaptamos nossos serviços de encontro com a melhor estratégia digital que eleve seu negócio.',
+    subtitle: 'Sobre nós'}
 
-  const cards = data[0].columns.filter(
-    (col: IColumn) => col.__component === 'page.card-only-text'
-  ) as IColumn[];
+  const cards:  ICardOnlyText[] = [
+    {id: '1', title: 'SEO otimizado', description:'Obtenha mais tráfego orgánico, para posicionar melhor o seu negócio na internet.'},
+    {id: '2', title: 'Estratégia de anúncios', description:'Alcance um número maior de possíveis clientes, a través de anúncios pagos (Facebook Ads, Google Ads)'},
+    {id: '3', title: 'Desenvolvimento de aplicações web', description:'Desenvolvemos aplicações web sob medida.'},
+    {id: '4', title: 'Web sites', description:'Posicione sua marca o negócio na internet, com páginas web modernas e adaptadas a qualquer dispositivo.'},
+  ] 
 
-  const cardsOnlyText = cards.map(card => ({
-    id: card.id,
-    title: card.Title,
-    description: card.Description
-  })) as ICardOnlyText[];
+  
 
   const textBox = {
-    id: textBlock.id,
-    title: textBlock.Title,
-    subtitle: textBlock.Subtitle,
-    name: textBlock.__component,
-    description: textBlock.Description
+    title: textBlock.title,
+    subtitle: textBlock.subtitle,
+    description: textBlock.description
   } as ITextBox;
 
   return {
     textBox,
-    cards: cardsOnlyText
-  };
+    cards: cards
+  } as IAboutUs;
 };
 
 export const getWhatWeDo = async (name: string): Promise<IWhatWeDo> => {
