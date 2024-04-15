@@ -3,11 +3,11 @@ export default interface ICardWithIcon {
   Title: string;
   Description: string;
   Icon: {
-    name: string;
+    name?: string;
     alternativeText: string;
-    mime: string;
+    mime?: string;
     url: string;
-    width: number;
-    height: number;
+    width?: number;
+    height?: number;
   };
 }

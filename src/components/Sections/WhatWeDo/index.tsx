@@ -17,14 +17,14 @@ const WhatWeDo = (data: IWhatWeDo) => {
             if (pos == 1) {
               return (
                 <S.WhatWeDoCard key={card.id}>
-                  <h2>{card.Title}</h2>
-                  <p>{card.Description}</p>
+                  <h2>{card.title}</h2>
+                  <p>{card.description}</p>
                   <S.WhatWeDoImage>
                     <Image
-                      src={card.Image.url}
-                      width={card.Image.width}
-                      height={card.Image.height}
-                      alt={card.Image.alternativeText}
+                      src={card.image.url}
+                      width={card.image.width}
+                      height={card.image.height}
+                      alt={card.image.alternativeText}
                     />
                   </S.WhatWeDoImage>
                   <hr />
@@ -35,14 +35,14 @@ const WhatWeDo = (data: IWhatWeDo) => {
                 <S.WhatWeDoCard key={card.id}>
                   <S.WhatWeDoImage>
                     <Image
-                      src={card.Image.url}
-                      width={card.Image.width}
-                      height={card.Image.height}
-                      alt={card.Image.alternativeText}
+                      src={card.image.url}
+                      width={card.image.width}
+                      height={card.image.height}
+                      alt={card.image.alternativeText}
                     />
                   </S.WhatWeDoImage>
-                  <h2>{card.Title}</h2>
-                  <p>{card.Description}</p>
+                  <h2>{card.title}</h2>
+                  <p>{card.description}</p>
                   <hr />
                 </S.WhatWeDoCard>
               );

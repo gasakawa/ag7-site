@@ -1,8 +1,8 @@
 export default interface ICardWithImageText {
   id: string;
-  Title: string;
-  Description: string;
-  Image: {
+  title: string;
+  description: string;
+  image: {
     name: string;
     alternativeText: string;
     mime: string;
