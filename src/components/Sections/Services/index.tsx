@@ -1,24 +1,24 @@
-import React from 'react';
-import ICardWithIcon from 'interfaces/i-card-with-icon';
-import IServices from 'interfaces/i-services';
+import React from "react";
+import ICardWithIcon from "interfaces/i-card-with-icon";
+import IServices from "interfaces/i-services";
 
-import * as S from 'styles/services';
-import CardWithIcon from 'components/CardWithIcon';
-import TextBox from 'components/TextBox';
+import * as S from "styles/services";
+import CardWithIcon from "components/CardWithIcon";
+import TextBox from "components/TextBox";
 
 const Services = (data: IServices) => {
   const iconStyles = [
     {
-      color: '#0674E7',
-      radius: '60px 30px 20px 45px',
+      color: "#0674E7",
+      radius: "60px 30px 20px 45px",
     },
-    { color: '#CA5691', radius: '60px 90px 30px 35px' },
-    { color: '#E76814', radius: '30px 30px 30px 50px' },
+    { color: "#CA5691", radius: "60px 90px 30px 35px" },
+    { color: "#E76814", radius: "30px 30px 30px 50px" },
   ];
 
   return (
     <>
-      <S.ServicesWrapper id='servicios'>
+      <S.ServicesWrapper id="services">
         <S.ServicesSection>
           <S.ServiceTextBlock>
             <TextBox {...data.textBox} />
