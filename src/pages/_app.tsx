@@ -14,7 +14,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         </title>
         <meta
           name='description'
-          content='Posiciona tu negocio en internet a través de diseño y desarrollo web, social media, advertising, asesorías. Comienza ya!'
+          content='Posicione seu negócio na internet a través de design e desenvolvimento web, advertising e assessorias. Comece já!'
         />
         <meta
           name='robots'
@@ -29,7 +29,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           property='og:description'
-          content='Posiciona tu negocio en internet a través de diseño y desarrollo web, social media, advertising, asesorías. Comienza ya!'
+          content='Posicione seu negócio na internet a través de design e desenvolvimento web, advertising e assessorias. Comece já!'
         />
         <meta property='og:url' content='https://www.ag7digital.com/' />
         <meta property='og:site_name' content='AG7 Digital Business' />
@@ -39,7 +39,7 @@ function MyApp({ Component, pageProps }: AppProps) {
         />
         <meta
           property='og:image'
-          content='https://www.ag7digital.com/wp-content/uploads/2020/09/img_top_01.png'
+          content='https://ag7digital-site.s3.amazonaws.com/logo-novo.png'
         />
         <meta name='twitter:card' content='summary_large_image' />
 
