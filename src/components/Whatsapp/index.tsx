@@ -30,7 +30,7 @@ const Whatsapp = () => {
       </S.WhasappText>
       <S.WhatsappIcon>
         <a
-          href='https://api.whatsapp.com/send?phone=5511999706020'
+          href='https://api.whatsapp.com/send?phone=5511947099655'
           target='_blank'
           rel='noreferrer'
         >
